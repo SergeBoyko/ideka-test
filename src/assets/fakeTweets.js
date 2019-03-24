@@ -4,7 +4,7 @@ const tweets = [
     tweetAbout: "Donald Trump",
     tweeterName: "@RosauraCabrera",
     author: "Rosaura Cabrera",
-    date: "3/1/2019 00:00:00 PM",
+    date: "1552660668",
     content:
       "Curabitur  @realDonaldTrump consequat ligula eu nisl posuere volutpat."
   },
@@ -13,7 +13,7 @@ const tweets = [
     tweetAbout: "Donald Trump",
     tweeterName: "@JeffreyGuterman",
     author: "Jeffrey Guterman",
-    date: "3/2/2019 00:00:00 PM",
+    date: "1552610668",
     content:
       "Maecenas laoreet, mauris  @realDonaldTrump  eget mattis sagittis, diam ante egestas dui, nec placerat elit nisi at lacus. "
   },
@@ -22,7 +22,7 @@ const tweets = [
     tweetAbout: "Donald Trump",
     tweeterName: "@FoxNews",
     author: "Fox News",
-    date: "3/3/2019 00:00:00 PM",
+    date: "1552620668",
     content:
       "Donec ut scelerisque neque, eu semper sapien.  Diam ante @realDonaldTrump egestas dui, nec placerat elit nisi at lacus. "
   },
@@ -31,7 +31,7 @@ const tweets = [
     tweetAbout: "Hillary Clinton",
     tweeterName: "@emergeamerica",
     author: "Emerge America",
-    date: "3/4/2019 00:00:00 PM",
+    date: "1552630668",
     content:
       "Maecenas fringilla neque nec  @HillaryClinton  pellentesque vulputate ligula."
   },
@@ -40,7 +40,7 @@ const tweets = [
     tweetAbout: "Hillary Clinton",
     tweeterName: "@InternationalWomensDay",
     author: "International Womens Day",
-    date: "3/5/2019 00:00:00 PM",
+    date: "1552640668",
     content: "Praesent vehicula ligula @HillaryClinton quis commodo molestie. "
   },
   {
@@ -48,7 +48,7 @@ const tweets = [
     tweetAbout: "Hillary Clinton",
     tweeterName: "@EmelyList",
     author: "Emely List",
-    date: "3/6/2019 00:00:00 PM",
+    date: "1552680668",
     content:
       "Maecenas erat neque, semper sed  @HillaryClinton gestas vel, venenatis eu nisl. "
   }

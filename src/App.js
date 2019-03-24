@@ -4,24 +4,33 @@ import { selectPerson } from "./redux/store/actions";
 
 import ListTweets from "./container/ListTweets";
 import { getTweets } from "./assets/fakeTweets";
+import { getDateFormatUnixTime } from "./services/getDateFormatUnixTime"
+import { sortByDate } from "./services/sortByDate"
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import { setDateToPattern } from "./services/setDateToPattern";
 
 class App extends Component {
   state = { tweets: getTweets() };
 
   componentDidMount() {
     const { tweets } = this.state;
-    const sortByDate = tweets.sort(
-      (d1, d2) => new Date(d2.date).getTime() - new Date(d1.date).getTime()
-    );
-    const tweetAbout = sortByDate.filter(
-      t => t.tweetAbout === this.props.selectedPerson
+
+    getDateFormatUnixTime(tweets);
+
+    sortByDate(tweets);
+
+    setDateToPattern(tweets);
+
+    const tweetAbout = tweets.filter(
+      t => t.tweetAbout === 'Hillary Clinton'
     );
     this.setState({ tweets: tweetAbout });
   }
 
   handleTogleCandidant = () => {
+    const tweets = getTweets()
+
     let person = this.props.selectedPerson;
     if (person === "Hillary Clinton") {
       this.props.selectPerson("Donald Trump");
@@ -29,6 +38,10 @@ class App extends Component {
     if (person === "Donald Trump") {
       this.props.selectPerson("Hillary Clinton");
     }
+    const tweetAbout = tweets.filter(
+      t => t.tweetAbout === person
+    );
+    this.setState({ tweets: tweetAbout });
   };
 
   render() {

@@ -1,7 +1,7 @@
 import * as actionTypes from "../store/actionType";
 
 const initialState = {
-  tweetAbout: "Hillary Clinton"
+  tweetAbout: "Donald Trump"
 };
 
 const reducer = (state = initialState, action) => {
