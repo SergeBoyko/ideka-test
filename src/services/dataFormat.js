@@ -14,7 +14,9 @@ export function dataFormatFromPattern(date) {
   const options = {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric"
   };
   const newDate = new Date(date);
   const formamattedDate = new Intl.DateTimeFormat("us-US", options).format(
