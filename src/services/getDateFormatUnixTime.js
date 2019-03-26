@@ -8,7 +8,6 @@ export function getDateFormatUnixTime(tweets) {
 
         let regEx = /[0-9]+/
         if (dataFormated.match(regEx)) {
-            console.log('dataFormated', dataFormated)
             tweets[i].date = dataFormat(dataFormated);
         }
     }

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Tweet from "../componets/Tweet";
 
+
 class ListTweets extends Component {
   render() {
-    const { tweets, clicked } = this.props;
+    const { tweets, clicked, selectedPerson } = this.props;
 
     return (
       <main className="container">
@@ -12,7 +13,7 @@ class ListTweets extends Component {
             Choose another subject
           </button>
           <div className="col-12">
-            <h1>This Tweets about ...</h1>
+            <h1>This Tweets about {selectedPerson}</h1>
             {tweets.map(tweet => (
               <Tweet
                 key={tweet._id}

@@ -11,7 +11,10 @@ import "./App.css";
 import { setDateToPattern } from "./services/setDateToPattern";
 
 class App extends Component {
-  state = { tweets: getTweets() };
+  state = {
+    tweets: getTweets(),
+    selectedPerson: 'Hillary Clinton'
+  };
 
   componentDidMount() {
     const { tweets } = this.state;
@@ -41,15 +44,15 @@ class App extends Component {
     const tweetAbout = tweets.filter(
       t => t.tweetAbout === person
     );
-    this.setState({ tweets: tweetAbout });
+    this.setState({ tweets: tweetAbout, selectedPerson: person });
   };
 
   render() {
-    const { tweets } = this.state;
+    const { tweets, selectedPerson } = this.state;
 
     return (
       <div className="App">
-        <ListTweets tweets={tweets} clicked={this.handleTogleCandidant} />
+        <ListTweets tweets={tweets} clicked={this.handleTogleCandidant} selectedPerson={selectedPerson} />
       </div>
     );
   }

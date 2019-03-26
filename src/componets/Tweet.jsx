@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { setDateToPattern } from "../services/setDateToPattern"
 
 class Tweet extends Component {
   render() {
