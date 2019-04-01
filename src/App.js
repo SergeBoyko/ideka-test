@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { selectPerson } from "./redux/store/actions";
+import PropTypes from 'prop-types';
 
 import ListTweets from "./container/ListTweets";
 import { getTweets } from "./assets/fakeTweets";
@@ -57,6 +58,12 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  tweets: PropTypes.array,
+  selectedPerson: PropTypes.string.isRequired
+}
+
 
 /////////// Redux here ///////////
 const mapStateToProps = state => {

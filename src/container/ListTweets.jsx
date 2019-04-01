@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import Tweet from "../componets/Tweet";
 
 
@@ -27,6 +28,12 @@ class ListTweets extends Component {
       </main>
     );
   }
+}
+
+ListTweets.propTypes = {
+  tweets: PropTypes.array.isRequired,
+  selectedPerson: PropTypes.oneOf(['Hillary Clinton', 'Donald Trump']),
+  clicked: PropTypes.func
 }
 
 export default ListTweets;
